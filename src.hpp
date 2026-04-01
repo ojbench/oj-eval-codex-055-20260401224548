@@ -41,7 +41,7 @@ public:
     string type() override { return string("no type"); }
     void print() override {
         object::print();
-        cout << "[mail] postmark: " << postmark << n;
+        cout << "[mail] postmark: " << postmark << endl;
     }
     virtual ~mail() {}
 };
@@ -74,7 +74,7 @@ public:
     string type() override { return string("air"); }
     void print() override {
         mail::print();
-        cout << "[air] airlines: " << airlines << n;
+        cout << "[air] airlines: " << airlines << endl;
     }
     ~air_mail() override {}
 };
@@ -125,7 +125,7 @@ public:
     string type() override { return string("train"); }
     void print() override {
         mail::print();
-        cout << "[train] station_num: " << len << n;
+        cout << "[train] station_num: " << len << endl;
     }
     ~train_mail() override {
         delete [] station_name;
@@ -164,7 +164,7 @@ public:
     string type() override { return string("car"); }
     void print() override {
         mail::print();
-        cout << "[car] driver_name: " << driver << n;
+        cout << "[car] driver_name: " << driver << endl;
     }
     ~car_mail() override {}
 };
