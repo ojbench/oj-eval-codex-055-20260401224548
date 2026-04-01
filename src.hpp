@@ -110,7 +110,7 @@ public:
     }
     string send_status(int y, int m, int d) override {
         date q(y,m,d);
-        if (q < send_date) return "mail not send";
+        if (q < send_date) return "not send";
         if (len==0){
             if (q < arrive_date) return "in train"; // no stations, just traveling
             else return "already arrive";
@@ -149,7 +149,7 @@ public:
     }
     string send_status(int y, int m, int d) override {
         date q(y,m,d);
-        if (q < send_date) return "mail not send";
+        if (q < send_date) return "not send";
         if (q < arrive_date){
             int qs = q.year*360 + (q.month-1)*30 + (q.day-1);
             int ss = send_date.year*360 + (send_date.month-1)*30 + (send_date.day-1);
